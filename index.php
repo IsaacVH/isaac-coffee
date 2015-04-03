@@ -5,55 +5,22 @@
 		<meta name="google-site-verification" content="_MQEJn7_y3RbJ7ogF_LLdw7-ZLHcoqhtXRAiSOznf8Y" />
 
 		<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
+		<script src="/libs/jquery/jquery-2.1.3.min.js"></script>
 		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
-
-		<!--
-		<style>
-			html {
-				height: 100%;
-			}
-
-			body {
-				font-family: Helvetica, Arial, sans-serif;
-				margin: 0;
-				height: 100%;
-			}
-
-			header.header {
-				padding: 15px;
-			}
-
-			section.content {
-				padding: 15px;
-				padding-left: 25px;
-			}
-
-			footer.footer p {
-				text-align: center;
-				margin: 15px;
-			}
-
-			footer.footer {
-				width: 100%;
-
-				position: absolute;
-				bottom: 0;
-			}
-		</style>
-		-->
 	</head>
 	<body>
-		<header class="header">
-			<h1>This is the header</h1>
-			<hr>
+		<header>
+			<nav class="container"><div class="container"><h3>Isaac.Coffee</h3></div></nav>
 		</header>
-		<section class="content">
-			<div>
-				Java Java Java Java Java Java Java Java Java Java
-			</div>
-		</section>
-		<footer class="footer">
-			<p>The website footer.</p>
+		<div class="container">
+			<hr />
+			<p>
+				Java Java Java Java Java Java Java Java Java Java <br /> OOOOOOOOOOOOOOOHHHHHHHHHHHHHHH!
+			</p>
+			<iframe style="width: 100%; height: 600px;" src="https://www.youtube.com/embed/OTVE5iPMKLg?autoplay=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<footer>
+			<p></p>
 		</footer>
 	</body>
 </html>
