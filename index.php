@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="google-site-verification" content="_MQEJn7_y3RbJ7ogF_LLdw7-ZLHcoqhtXRAiSOznf8Y" />
+
+		<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
+		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--
 		<style>
 			html {
 				height: 100%;
@@ -35,6 +40,7 @@
 				bottom: 0;
 			}
 		</style>
+		-->
 	</head>
 	<body>
 		<header class="header">
