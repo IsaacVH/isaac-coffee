@@ -10,7 +10,33 @@
 	</head>
 	<body>
 		<header>
-			<nav class="container"><div class="container"><h3>Isaac.Coffee</h3></div></nav>
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<div class="navbar-header">Isaac.Coffee</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+									Dropdown
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another Action</a></li>
+									<li><a href="#">Something Else Here</a></li>
+									<li class="divider"></li>
+									<li class="dropdown-header"></li>
+									<li><a href="#">Separated Link</a></li>
+									<li><a href="#">One More Separated Link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</header>
 		<div class="container">
 			<hr />
