@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="google-site-verification" content="_MQEJn7_y3RbJ7ogF_LLdw7-ZLHcoqhtXRAiSOznf8Y" />
 
 		<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
@@ -50,13 +51,12 @@
 		</header>
 
 		<div class="container main-content">
-			<h3>Home</h3>
+			<h3>Home - Is where the Coffee is.</h3>
 			<hr />
-			<p>
-				Java Java Java Java Java Java Java Java Java Java <br /> OOOOOOOOOOOOOOOHHHHHHHHHHHHHHH!
-			</p>
+			<p> Coffeeeeeeeeehhhhhh..... </p>
 			<div style="text-align: center;">
-				<div id="music-player"></div>
+				<!-- <div id="music-player"></div> -->
+				<iframe style="width: 100%; height: 350px;" src="https://www.youtube.com/embed/Hlzgt8MLajA?list=PL9C3BEAAA1EE2DB51&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
 				<!-- <iframe style="margin: 20px auto; width: 720px; height: 422px;" src="https://www.youtube.com/embed/Hlzgt8MLajA" frameborder="0" allowfullscreen></iframe> -->
 				<br />
 				<div id="rain-player"></div>
@@ -86,8 +86,8 @@
 			var player2;
 			function onYouTubeIframeAPIReady() {
 			  player1 = new YT.Player('rain-player', {
-			    height: '35px',
-			    width: '300px',
+			    height: '30px',
+			    width: '100%',
 			    videoId: 'mQ9OWMsJBTk',
 			    events: {
 			      'onReady': onPlayer1Ready,
@@ -96,8 +96,7 @@
 			  });
 
 			  player2 = new YT.Player('music-player', {
-			  	height: '422px',
-			  	width: '720px',
+			  	width: '100%',
 			  	videoId: 'Hlzgt8MLajA',
 			  	events: {
 			  		'onReady': onPlayer2Ready,
@@ -109,12 +108,13 @@
 			// 4. The API will call this function when the video player is ready.
 			function onPlayer1Ready(event) {
 				event.target.setVolume(40);
-				event.target.seekTo(6240, true);
+				event.target.seekTo(7365, true);
 				event.target.playVideo();
 			}
 
 			function onPlayer2Ready(event) {
 				event.target.setVolume(80);
+				event.target.setLoop(true);
 				event.target.playVideo();
 			}
 
@@ -123,13 +123,12 @@
 			//    the player should play for six seconds and then stop.
 			var done = false;
 			function onPlayerStateChange(event) {
-			  if (event.data == YT.PlayerState.PLAYING && !done) {
-			    setTimeout(stopVideo, 6000);
-			    done = true;
+			  if (event.data == YT.PlayerState.ENDED){
+			  	event.target.playVideo();
 			  }
 			}
 			function stopVideo() {
-			  player.stopVideo();
+			  //player.stopVideo();
 			}
 
 		</script>
