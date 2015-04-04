@@ -73,7 +73,6 @@
 		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
 
 		<script>
-
 			// 2. This code loads the IFrame Player API code asynchronously.
 			var tag = document.createElement('script');
 
@@ -110,6 +109,7 @@
 			// 4. The API will call this function when the video player is ready.
 			function onPlayer1Ready(event) {
 				event.target.setVolume(40);
+				event.target.seekTo(6240, true);
 				event.target.playVideo();
 			}
 
