@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-inverse">
 				<div class="container">
 					<div class="navbar-header">
       					<button type="button" class="navbar-toggle collapsed" style="border: none; margin: 0; padding: 18px 20px; border-radius: 0;" data-toggle="collapse" data-target="#mobile-drop-down-menu">
@@ -55,7 +55,13 @@
 			<p>
 				Java Java Java Java Java Java Java Java Java Java <br /> OOOOOOOOOOOOOOOHHHHHHHHHHHHHHH!
 			</p>
-			<iframe style="width: 100%; height: 600px;" src="https://www.youtube.com/embed/OTVE5iPMKLg?autoplay=0" frameborder="0" allowfullscreen></iframe>
+			<div style="text-align: center;">
+				<div id="music-player"></div>
+				<!-- <iframe style="margin: 20px auto; width: 720px; height: 422px;" src="https://www.youtube.com/embed/Hlzgt8MLajA" frameborder="0" allowfullscreen></iframe> -->
+				<br />
+				<div id="rain-player"></div>
+			</div>
+			<!-- <iframe id="rain-video" style="height: 300px; width: 300px;" src="https://www.youtube.com/embed/Sv0LwXYAVVg" frameborder="0" allowfullscreen></iframe> -->
 		</div>
 
 		<footer>
@@ -65,5 +71,67 @@
 		<!-- Footer Scripts -->
 		<script src="/libs/jquery/jquery-2.1.3.min.js"></script>
 		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+
+		<script>
+
+			// 2. This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player1;
+			var player2;
+			function onYouTubeIframeAPIReady() {
+			  player1 = new YT.Player('rain-player', {
+			    height: '35px',
+			    width: '300px',
+			    videoId: 'mQ9OWMsJBTk',
+			    events: {
+			      'onReady': onPlayer1Ready,
+			      'onStateChange': onPlayerStateChange
+			    }
+			  });
+
+			  player2 = new YT.Player('music-player', {
+			  	height: '422px',
+			  	width: '720px',
+			  	videoId: 'Hlzgt8MLajA',
+			  	events: {
+			  		'onReady': onPlayer2Ready,
+			  		'onStateChange': onPlayerStateChange
+			  	}
+			  });
+			}
+
+			// 4. The API will call this function when the video player is ready.
+			function onPlayer1Ready(event) {
+				event.target.setVolume(40);
+				event.target.playVideo();
+			}
+
+			function onPlayer2Ready(event) {
+				event.target.setVolume(80);
+				event.target.playVideo();
+			}
+
+			// 5. The API calls this function when the player's state changes.
+			//    The function indicates that when playing a video (state=1),
+			//    the player should play for six seconds and then stop.
+			var done = false;
+			function onPlayerStateChange(event) {
+			  if (event.data == YT.PlayerState.PLAYING && !done) {
+			    setTimeout(stopVideo, 6000);
+			    done = true;
+			  }
+			}
+			function stopVideo() {
+			  player.stopVideo();
+			}
+
+		</script>
 	</body>
 </html>

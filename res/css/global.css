@@ -1,26 +1,38 @@
 body {
-	background-image: url('/res/img/rough_diagonal.png');
+	background-image: url('/res/img/backgrounds/px_by_Gre3g.png');
 }
 
-.navbar-default {
+hr {
+	border-top: 1px solid #6d6d6d;
+}
+
+.navbar-inverse {
 	border: none;
-	border-bottom: 1px solid lightgray;
 	border-radius: 0;
-	box-shadow: 1px 1px 8px -3px gray;
+	border-bottom: 1px solid #111111;
+
+	background: linear-gradient(#313131, #222222);
+
+	box-shadow: 1px 1px 8px -3px black;
 }
 
 div.main-content {
-	background-color: #f8f8f8;
-	border: 1px solid lightgray;
+	/*background-color: #f8f8f8;*/
+	background-color: #4d4d4d;
+	color: lightgray;
+
+	border: 1px solid #6d6d6d;
 	border-left: none;
 	border-right: none;
-	box-shadow: 1px 1px 8px -3px gray;
+
+	box-shadow: 1px 1px 8px -3px black;
 	padding: 15px;
+	min-height: 750px;
 }
 
 @media (min-width: 768px) {
 	div.main-content {
-		border: 1px solid lightgray;
+		border: 1px solid #6d6d6d;
 	}
 
 	.navbar-inverse {
