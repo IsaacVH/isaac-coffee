@@ -1,0 +1,31 @@
+body {
+	background-image: url('/res/img/rough_diagonal.png');
+}
+
+.navbar-default {
+	border: none;
+	border-bottom: 1px solid lightgray;
+	border-radius: 0;
+	box-shadow: 1px 1px 8px -3px gray;
+}
+
+div.main-content {
+	background-color: #f8f8f8;
+	border: 1px solid lightgray;
+	border-left: none;
+	border-right: none;
+	box-shadow: 1px 1px 8px -3px gray;
+	padding: 15px;
+}
+
+@media (min-width: 768px) {
+	div.main-content {
+		border: 1px solid lightgray;
+	}
+
+	.navbar-inverse {
+		border-radius: 0;
+	}
+}
+
+

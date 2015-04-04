@@ -5,17 +5,27 @@
 		<meta name="google-site-verification" content="_MQEJn7_y3RbJ7ogF_LLdw7-ZLHcoqhtXRAiSOznf8Y" />
 
 		<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
-		<script src="/libs/jquery/jquery-2.1.3.min.js"></script>
-		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/res/css/global.css" />
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-inverse">
+			<nav class="navbar navbar-default">
 				<div class="container">
-					<div class="navbar-header">Isaac.Coffee</div>
-					<div class="navbar-collapse collapse">
+					<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" style="border: none; margin: 0; padding: 18px 20px; border-radius: 0;" data-toggle="collapse" data-target="#mobile-drop-down-menu">
+							<span class="sr-only">Toggle Navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">
+							<span style="color: orange;"><i class="glyphicon glyphicon-menu-right"></i></span>
+							<span style="color: dark-gray; font-size: 24px !important;">Isaac.Coffee</span>
+						</a>
+					</div>
+					<div class="navbar-collapse collapse" id="mobile-drop-down-menu">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
+							<li class="active"><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li class="dropdown">
@@ -38,15 +48,22 @@
 				</div>
 			</nav>
 		</header>
-		<div class="container">
+
+		<div class="container main-content">
+			<h3>Home</h3>
 			<hr />
 			<p>
 				Java Java Java Java Java Java Java Java Java Java <br /> OOOOOOOOOOOOOOOHHHHHHHHHHHHHHH!
 			</p>
-			<iframe style="width: 100%; height: 600px;" src="https://www.youtube.com/embed/OTVE5iPMKLg?autoplay=1" frameborder="0" allowfullscreen></iframe>
+			<iframe style="width: 100%; height: 600px;" src="https://www.youtube.com/embed/OTVE5iPMKLg?autoplay=0" frameborder="0" allowfullscreen></iframe>
 		</div>
+
 		<footer>
 			<p></p>
 		</footer>
+
+		<!-- Footer Scripts -->
+		<script src="/libs/jquery/jquery-2.1.3.min.js"></script>
+		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
