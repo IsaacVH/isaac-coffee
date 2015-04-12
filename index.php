@@ -22,6 +22,7 @@
 						<a class="navbar-brand" href="/">
 							<span style="color: orange;"><i class="glyphicon glyphicon-menu-right"></i></span>
 							<span style="color: dark-gray; font-size: 24px !important;">Isaac.Coffee</span>
+							<!-- <img src="/BeatCrawler-Logo_Large.png" style="height: 100%;"> -->
 						</a>
 					</div>
 					<div class="navbar-collapse collapse" id="mobile-drop-down-menu">
@@ -51,17 +52,12 @@
 		</header>
 
 		<div class="container main-content">
-			<h3>Home - Is where the Coffee is.</h3>
+			<h3>Home</h3>
 			<hr />
 			<p> Coffeeeeeeeeehhhhhh..... </p>
 			<div style="text-align: center;">
-				<!-- <div id="music-player"></div> -->
-				<iframe style="width: 100%; height: 350px;" src="https://www.youtube.com/embed/Hlzgt8MLajA?list=PL9C3BEAAA1EE2DB51&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
-				<!-- <iframe style="margin: 20px auto; width: 720px; height: 422px;" src="https://www.youtube.com/embed/Hlzgt8MLajA" frameborder="0" allowfullscreen></iframe> -->
-				<br />
-				<div id="rain-player"></div>
+
 			</div>
-			<!-- <iframe id="rain-video" style="height: 300px; width: 300px;" src="https://www.youtube.com/embed/Sv0LwXYAVVg" frameborder="0" allowfullscreen></iframe> -->
 		</div>
 
 		<footer>
@@ -71,66 +67,5 @@
 		<!-- Footer Scripts -->
 		<script src="/libs/jquery/jquery-2.1.3.min.js"></script>
 		<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
-
-		<script>
-			// 2. This code loads the IFrame Player API code asynchronously.
-			var tag = document.createElement('script');
-
-			tag.src = "https://www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-			// 3. This function creates an <iframe> (and YouTube player)
-			//    after the API code downloads.
-			var player1;
-			var player2;
-			function onYouTubeIframeAPIReady() {
-			  player1 = new YT.Player('rain-player', {
-			    height: '30px',
-			    width: '100%',
-			    videoId: 'mQ9OWMsJBTk',
-			    events: {
-			      'onReady': onPlayer1Ready,
-			      'onStateChange': onPlayerStateChange
-			    }
-			  });
-
-			  player2 = new YT.Player('music-player', {
-			  	width: '100%',
-			  	videoId: 'Hlzgt8MLajA',
-			  	events: {
-			  		'onReady': onPlayer2Ready,
-			  		'onStateChange': onPlayerStateChange
-			  	}
-			  });
-			}
-
-			// 4. The API will call this function when the video player is ready.
-			function onPlayer1Ready(event) {
-				event.target.setVolume(40);
-				event.target.seekTo(7365, true);
-				event.target.playVideo();
-			}
-
-			function onPlayer2Ready(event) {
-				event.target.setVolume(80);
-				event.target.setLoop(true);
-				event.target.playVideo();
-			}
-
-			// 5. The API calls this function when the player's state changes.
-			//    The function indicates that when playing a video (state=1),
-			//    the player should play for six seconds and then stop.
-			var done = false;
-			function onPlayerStateChange(event) {
-			  if (event.data == YT.PlayerState.ENDED){
-			  	event.target.playVideo();
-			  }
-			}
-			function stopVideo() {
-			  //player.stopVideo();
-			}
-
-		</script>
 	</body>
 </html>
